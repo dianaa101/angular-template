@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "languages": [
+    {
+      "name": "English",
+      "code": "en",
+      "enabled": true
+    },
+    {
+      "name": "French",
+      "code": "fr",
+      "enabled": true
+    },
+    {
+      "name": "German",
+      "code": "de",
+      "enabled": true
+    },
+    {
+      "name": "Spanish",
+      "code": "es",
+      "enabled": false
+    },
+    {
+      "name": "Italian",
+      "code": "it",
+      "enabled": false
+    }
+  ]
+}

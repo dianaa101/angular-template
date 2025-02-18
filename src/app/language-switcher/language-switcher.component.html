@@ -1,0 +1,11 @@
+<div class="language-switcher" *ngIf="config.enabled">
+  <button class="dropdown-toggle" (click)="toggleDropdown()">
+    Language
+  </button>
+  <ul class="dropdown-menu" [class.show]="dropdownOpen">
+    <li *ngFor="let lang of visibleLanguages">
+      <button (click)="changeLanguage(lang)">{{ lang.name }}</button>
+    </li>
+  </ul>
+</div>
+
