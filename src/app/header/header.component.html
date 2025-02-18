@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <li *ngFor="let page of pages">
+      <a [routerLink]="page.route" [class.disabled]="!page.enabled">
+        {{ page.name }}
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

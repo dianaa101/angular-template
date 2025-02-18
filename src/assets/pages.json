@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Home",
+    "route": "home",
+    "enabled": true
+  },
+  {
+    "name": "About",
+    "route": "about",
+    "enabled": true
+  },
+  {
+    "name": "Services",
+    "route": "services",
+    "enabled": true
+  },
+  {
+    "name": "Contact",
+    "route": "contact",
+    "enabled": true
+  }
+]

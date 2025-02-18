@@ -1,0 +1,12 @@
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+}
+
+  footer.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
