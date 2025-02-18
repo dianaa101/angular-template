@@ -1,0 +1,9 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+  <ul>
+    <ng-container *ngFor="let page of pages">
+      <li *ngIf="page.enabled">
+        <a [routerLink]="page.link">{{ page.name }}</a>
+      </li>
+    </ng-container>
+  </ul>
+</div>

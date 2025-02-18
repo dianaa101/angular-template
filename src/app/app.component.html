@@ -1,4 +1,6 @@
-<app-header></app-header>
+<app-header [isSidebarEnabled]="sidebarEnabled"></app-header>
 <app-language-switcher></app-language-switcher>
 <router-outlet></router-outlet>
+<button (click)="toggleSidebar()">Toggle Sidebar</button>
+<app-sidebar [isExpanded]="sidebarExpanded"></app-sidebar>
 <app-footer></app-footer>

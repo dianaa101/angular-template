@@ -1,10 +1,18 @@
-<nav>
-  <ul>
-    <li *ngFor="let page of pages">
-      <a [routerLink]="page.route" [class.disabled]="!page.enabled">
-        {{ page.name }}
-      </a>
-    </li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<header class="header">
+  <nav>
+    <ul>
+      <ng-container *ngFor="let page of pages">
+        <li *ngIf="page.enabled">
+          <a [routerLink]="page.link">{{ page.name }}</a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+  <!--
+    <button *ngIf="isSidebarEnabled" (click)="isSidebarExpanded = !isSidebarExpanded">
+      {{ isSidebarExpanded ? 'Collapse Sidebar' : 'Expand Sidebar' }}
+    </button>
+    -->
+</header>
+
+

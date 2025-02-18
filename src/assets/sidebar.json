@@ -1,0 +1,26 @@
+{
+  "enabled": true,
+  "expanded": false,
+  "items": [
+    {
+      "name": "Home",
+      "link": "/",
+      "enabled": true
+    },
+    {
+      "name": "About",
+      "link": "/about",
+      "enabled": true
+    },
+    {
+      "name": "Services",
+      "link": "/services",
+      "enabled": true
+    },
+    {
+      "name": "Contact",
+      "link": "/contact",
+      "enabled": true
+    }
+  ]
+}

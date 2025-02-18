@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagesService, Page } from './pages.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-  pages: Page[] = [];
+export class HeaderComponent {
+  pages = [
+    { name: 'Home', link: '/', enabled: true },
+    { name: 'About', link: '/about', enabled: true },
+    { name: 'Services', link: '/services', enabled: true },
+    { name: 'Contact', link: '/contact', enabled: true }
+  ];
 
-  constructor(private pagesService: PagesService) { }
+  @Input() isSidebarEnabled: boolean = false;
+  isSidebarExpanded: boolean = true; 
 
-  ngOnInit(): void {
-    this.pagesService.getPages().subscribe(data => {
-      this.pages = data;
-    });
+  toggleSidebar() {
+    this.isSidebarExpanded = !this.isSidebarExpanded;
   }
 }
