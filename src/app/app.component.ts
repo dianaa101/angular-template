@@ -17,7 +17,7 @@ export class AppComponent {
   sidebarEnabled = true;
   sidebarExpanded: boolean = false;
 
-  toggleSidebar() {
-    this.sidebarExpanded = !this.sidebarExpanded;
+  onSidebarToggled(isExpanded: boolean) {
+    this.sidebarExpanded = isExpanded;
   }
 }

@@ -1,18 +1,19 @@
 <header class="header">
-  <nav>
-    <ul>
-      <ng-container *ngFor="let page of pages">
-        <li *ngIf="page.enabled">
-          <a [routerLink]="page.link">{{ page.name }}</a>
-        </li>
-      </ng-container>
-    </ul>
-  </nav>
-  <!--
-    <button *ngIf="isSidebarEnabled" (click)="isSidebarExpanded = !isSidebarExpanded">
+  <div class="left-section">
+    <button *ngIf="isSidebarEnabled" (click)="toggleSidebar()" class="toggle-sidebar-button">
       {{ isSidebarExpanded ? 'Collapse Sidebar' : 'Expand Sidebar' }}
     </button>
-    -->
-</header>
+    <nav>
+      <ul>
+        <ng-container *ngFor="let page of pages">
+          <li *ngIf="page.enabled">
+            <a [routerLink]="page.link">{{ page.name }}</a>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+  </div>
+  <app-language-switcher></app-language-switcher>
 
+</header>
 
